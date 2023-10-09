@@ -5,22 +5,15 @@ import './App.css'
 import {Sidebar} from "./components/Sidebar.jsx";
 import profile from "./assets/profile.jpeg"
 import {Home} from "./pages/Home.jsx";
-import {Login} from "./pages/Login.jsx";
+import Loginsignup, {Login} from "./pages/Login.jsx";
+import { Mainlayout } from './pagelayout/mainlayout';
 function App() {
 
 
   return (
       <body>
-      <div className="flex">
-          <aside className="w-56 fixed left-0 top-0 pb-10 h-screen bg-[#1E1E1E]">
-                <Sidebar image={profile} name={"Navneetkrh"}/>
-          </aside>
-          <main className="flex-1 ml-56">
-              <Home/>
-
-          </main>
-      </div>
-      {/*  <Login/>*/}
+     
+      <Loginsignup/>
       </body>
 
     // <section className={"flex flex-row  w-screen bg-[#1E1E1E]"}>
