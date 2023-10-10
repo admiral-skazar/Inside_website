@@ -3,7 +3,8 @@
     import {Faqs} from "./Faqs.jsx";
     import {Team} from "./Team.jsx";
     import {Footer} from "./Footer.jsx";
-    import {Login} from "./Login.jsx";
+    import {Link} from "react-router-dom";
+    // import {Login} from "./Login.jsx";
 export function Home() {
 
     return (
@@ -33,7 +34,8 @@ export function Home() {
                             <h1 className={"text-white text-center text-6xl font-bold"}>Your Odyssey Awaits</h1>
                             <h2 className={"text-white text-3xl text-center mt-4 mb-5"}>Start Your Game Dev Journey Today</h2>
                             <button className={"bg-[#F5DD5F] p-1 rounded-3xl w-40 h-12 hover:bg-bluish hover:text-white "}>
-                                <text className={"font-bold text-2xl "}>Join Us</text>
+                            
+                                <text className={"font-bold text-2xl "}><Link to = '/login'>Join Us</Link></text>
                             </button>
                         </div>
                     </div>
@@ -44,7 +46,6 @@ export function Home() {
             <Faqs/>
             <Team/>
             <Footer/>
-            <Login/>
 
         </div>
     )

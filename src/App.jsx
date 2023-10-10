@@ -7,31 +7,29 @@ import profile from "./assets/profile.jpeg"
 import {Home} from "./pages/Home.jsx";
 import Loginsignup, {Login} from "./pages/Login.jsx";
 import { Mainlayout } from './pagelayout/mainlayout';
+import {RouterProvider,createBrowserRouter} from "react-router-dom";
 function App() {
+let router = createBrowserRouter([
 
+  {
+    path: '/login',
+    element: <Loginsignup />,
+  },
+  {
+    path: '/',
+    element: <Mainlayout />,
+  },
+  
+  {
+    path: '*',
+    element: <><h1>Not found</h1></>,
+  },
+])
 
   return (
-      <body>
-     
-      <Loginsignup/>
-      </body>
-
-    // <section className={"flex flex-row  w-screen bg-[#1E1E1E]"}>
-    //
-    //     <div className="grid grid-cols-7">
-    //         <aside className="self-start sticky top-0  col-span-1">
-    //             <Sidebar image={profile} name={"Navneetkrh"}/>
-    //         </aside>
-    //
-    //         <main className="col-span-6">
-    //             <Home/>
-    //         </main>
-    //     </div>
-    //
-    //
-    //
-    //
-    // </section>
+    <div>
+      <RouterProvider router={router} />
+    </div>
   )
 }
 
